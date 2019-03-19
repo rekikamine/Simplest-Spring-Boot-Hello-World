@@ -1,21 +1,26 @@
 package example.smallest.controllers;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.stereotype.*;
+import org.springframework.boot.*;
+import org.springframework.boot.autoconfigure.*;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
+@EnableAutoConfiguration
 public class WelcomeController {
-	
-	@RequestMapping(method = RequestMethod.GET, produces = {"application/json"})
-	public @ResponseBody String helloWorld() {
-		
-		//Flux
-		
-		
-		
-		
-		return "Hello FUCKING World!!!"; //"application/json" mean this is a text not a redirect
+	@RequestMapping("/bilel")
+	String home(){
+		return "Hello Bilel -V3 !";
 	}
+	@RequestMapping("/amine")
+	String doo(){
+		return "Hello Amine -V3 !";
+	}
+	@RequestMapping("/amen")
+	String hi(){
+		return "Hello Amen -V3 !";
+	
+	}
+	
+	
 }
